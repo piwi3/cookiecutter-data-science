@@ -21,14 +21,15 @@ endif
 #################################################################################
 
 ## Set up minimal conda environment environment
-create_environment:
+create_conda_env:
 ifeq (True,$(HAS_CONDA))
 	@echo ">>> Detected conda, creating conda environment."
 	conda create env -f environment.yaml
 else
 	@echo ">>> No conda detected - no conda env created."
 endif
-	@echo ">>> New conda env created. Activate with: conda activate $(REPO_NAME)"
+	conda activate $(REPO_NAME)
+	@echo ">>> New conda environment created and activated!"
 
 ## ToDo: Add functionality to directly setup poetry, git and dvc
 
