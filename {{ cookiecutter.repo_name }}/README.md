@@ -28,8 +28,14 @@ Project Organization
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── pre-commit-config.yaml  <- Defines pre-commit hooks use before every commit    
+    │
+    ├── environment.yaml   <- The environment file to setup minimal conda environemnt, i.e.
+    │                         generated with `conda env create -f environment.yaml`
+    │
+    ├── pyproject.toml     <- Contains basic setup to install environment via poetry, i.e. 
+    │                         via running 'poetry install" (activate conda env first via 
+    │                         'activate {{cookiecutter.repo_name}})
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
@@ -50,7 +56,6 @@ Project Organization
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
 
 --------
 
