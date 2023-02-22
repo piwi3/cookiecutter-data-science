@@ -1,0 +1,8 @@
+name: {{cookiecutter.repo_name}}
+
+channels:
+ - default
+ - conda-forge
+
+dependencies:
+ - python>=3.9

@@ -1,0 +1,42 @@
+exclude: '.git|.tox'
+default_stages: [commit]
+fail_fast: false
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-toml
+      - id: check-merge-conflict
+
+  - repo: https://github.com/mwouts/jupytext
+    rev: v1.14.1
+    hooks:
+      - id: jupytext
+        args: [--from, ipynb, --to, "py:percent", --pipe, black]
+        additional_dependencies:
+          - black==22.3.0 # Matches hook
+
+  - repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+      - id: black-jupyter
+        additional_dependencies: ['click==8.0.4']
+        exclude: ^skillfinder/data/.*$|^mlruns/.*$
+
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        exclude: ^notebooks/.*$|^skillfinder/data/.*$|^mlruns/.*$
+        args: ["--profile", "black"]
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+        additional_dependencies: [flake8-isort]
+        exclude: ^notebooks/.*$|^skillfinder/data/.*$|^mlruns/.*$
+        args: ['--max-line-length=140']
