@@ -7,7 +7,9 @@ repos:
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
+        exclude: ^notebooks/.*$|^docs/*$
       - id: end-of-file-fixer
+        exclude: ^notebooks/.*$|^docs/*$
       - id: check-toml
       - id: check-merge-conflict
 
@@ -24,13 +26,13 @@ repos:
     hooks:
       - id: black-jupyter
         additional_dependencies: ['click==8.0.4']
-        exclude: ^skillfinder/data/.*$|^mlruns/.*$
+        exclude: ^notebooks/.*$|^docs/*$
 
   - repo: https://github.com/timothycrosley/isort
     rev: 5.10.1
     hooks:
       - id: isort
-        exclude: ^notebooks/.*$|^skillfinder/data/.*$|^mlruns/.*$
+        exclude: ^notebooks/.*$|^docs/*$
         args: ["--profile", "black"]
 
   - repo: https://github.com/PyCQA/flake8
@@ -38,5 +40,5 @@ repos:
     hooks:
       - id: flake8
         additional_dependencies: [flake8-isort]
-        exclude: ^notebooks/.*$|^skillfinder/data/.*$|^mlruns/.*$
+        exclude: ^notebooks/.*$|^docs/*$
         args: ['--max-line-length=140']
