@@ -28,8 +28,7 @@ ifeq (True,$(HAS_CONDA))
 else
 	@echo ">>> No conda detected - no conda env created."
 endif
-	conda activate $(REPO_NAME)
-	@echo ">>> New conda environment created and activated!"
+	@echo ">>> New conda environment created - activate before doing 'poetry install'!"
 
 ## ToDo: Add functionality to directly setup poetry, git and dvc
 
