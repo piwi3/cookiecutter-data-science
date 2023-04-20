@@ -24,7 +24,7 @@ endif
 create_conda_env:
 ifeq (True,$(HAS_CONDA))
 	@echo ">>> Detected conda, creating conda environment."
-	conda create env -f environment.yaml
+	conda env create -f environment.yaml
 else
 	@echo ">>> No conda detected - no conda env created."
 endif
