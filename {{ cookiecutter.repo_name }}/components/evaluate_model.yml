@@ -18,7 +18,7 @@ code: ../pipeline/src/
 environment: azureml:tft_environment@latest
 command: >-
   python evaluate_model.py
-  --train_input_path ${{inputs.train_input_path}}
-  --test_input_path ${{inputs.test_input_path}}
-  --model_input_path ${{inputs.model_input_path}}
-  --params_input_path ${{inputs.params_input_path}}
+  --train_input_path ## Dollar sign + in double curly brackets inputs.test_input_path
+  --test_input_path 
+  --model_input_path 
+  --params_input_path 

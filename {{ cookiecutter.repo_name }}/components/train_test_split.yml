@@ -19,6 +19,6 @@ code: ../pipeline/src/
 environment: azureml:tft_environment@latest
 command: >-
   python train_test_split.py 
-  --dataset_input_path ${{inputs.dataset_input_path}}
-  --train_output_path ${{outputs.train_output_path}}
-  --test_output_path ${{outputs.test_output_path}}
+  --dataset_input_path ## Dollar sign + in double curly brackets inputs.dataset_input_path
+  --train_output_path 
+  --test_output_path 
