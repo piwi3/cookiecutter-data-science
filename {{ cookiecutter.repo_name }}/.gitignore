@@ -77,6 +77,8 @@ target/
 
 # exclude data from source control by default
 /data/
+!data/.gitkeep
+pipeline/tmp_data/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -88,12 +90,11 @@ target/
 # Mypy cache
 .mypy_cache/
 
-# Others
-pipeline/tmp_data/
-!data/.gitkeep
-.env
+# terraform
 *.tfstate
 *.tfstate.backup
 *.terraform.lock.hcl
 .terraform/
+
+# azure ml workspace
 config.json
