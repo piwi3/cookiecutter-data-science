@@ -9,15 +9,15 @@ packages = [{include = "src"}]
 [tool.poetry.dependencies]
 python = "{{cookiecutter.python_version}}"
 pre-commit = "^3.0.4"
-ipykernel
-sphinx
-azure-ai-ml
-azure-identity
-azure-storage-blob
-mlflow
-azureml-mlflow
-seaborn
-python-dotenv
+ipykernel="*"
+sphinx="*"
+azure-ai-ml="*"
+azure-identity="*"
+azure-storage-blob="*"
+mlflow="*"
+azureml-mlflow="*"
+seaborn="*"
+python-dotenv="*"
 
 [build-system]
 requires = ["poetry-core"]
