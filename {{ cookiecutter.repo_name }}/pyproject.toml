@@ -8,11 +8,16 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "{{cookiecutter.python_version}}"
-python-dotenv = "^0.21.1"
-ipykernel = "^6.21.2"
 pre-commit = "^3.0.4"
-sphinx = "^6.1.3"
-
+ipykernel
+sphinx
+azure-ai-ml
+azure-identity
+azure-storage-blob
+mlflow
+azureml-mlflow
+seaborn
+python-dotenv
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,0 +1,14 @@
+name: tft_environment
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python = 3.9
+  - protobuf = 3.20.3
+  - mlflow
+  - pip:
+      - pytorch-forecasting == 0.10.3
+      - azureml-tensorboard == 1.49.0
+      - torch<1.13
+      - torch-tb-profiler==0.4.1
+      - azureml-mlflow
